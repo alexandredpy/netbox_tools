@@ -18,6 +18,7 @@ sudo cp /opt/netbox-$OLD/netbox/netbox/configuration.py /opt/netbox/netbox/netbo
 sudo cp /opt/netbox-$OLD/netbox/netbox/ldap_config.py /opt/netbox/netbox/netbox/ #May return error if not using LDAP
 sudo cp -pr /opt/netbox-$OLD/netbox/media/ /opt/netbox/netbox/
 sudo cp /opt/netbox-$OLD/gunicorn.py /opt/netbox/
+cd /opt/netbox/
 sudo sh /opt/netbox/upgrade.sh
 
 sudo systemctl daemon-reload
