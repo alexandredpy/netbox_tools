@@ -11,6 +11,7 @@ echo "Enter database password for user Netbox: "
 read dbpasswd
 echo "Enter server name (ex: netbox.example.com): "
 read servername
+currentdir=$(pwd)
 
 ##### Database installation #####
 sudo apt update
@@ -63,11 +64,9 @@ sudo systemctl enable netbox netbox-rq
 
 ##### Apache2 install and config #####
 sudo apt install -y apache2
-sudo cp /opt/netbox/contrib/apache.conf /etc/apache2/sites-available/netbox.conf
+sudo cp $currentdir/netbo.conf /etc/apache2/sites-available/netbox.conf
 # Change config to HTTP port 80
 sudo sed -i "s/ServerName netbox.example.com/ServerName $servername/" /etc/apache2/sites-available/netbox.conf
-sudo sed -i "s/<VirtualHost *:443>/<VirtualHost *:80>/" /etc/apache2/sites-available/netbox.conf
-sudo sed ‘NUM7d, NUM9d’ /etc/apache2/sites-available/netbox.conf
 sudo a2enmod ssl proxy proxy_http headers
 sudo a2dissite 000-default
 sudo a2ensite netbox
