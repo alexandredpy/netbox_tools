@@ -42,7 +42,7 @@ sudo cp configuration.example.py configuration.py
 sudo sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \['*'\]/" configuration.py
 sudo sed -i "s/'USER': '',/'USER': 'netbox',/" configuration.py
 sudo sed -i "s/'PASSWORD': '',           # PostgreSQL password/'PASSWORD': '$dbpasswd',/" configuration.py
-privatekey = $(python3 ../generate_secret_key.py)
+privatekey=$(python3 ../generate_secret_key.py)
 sudo sed -i "s/SECRET_KEY = ''/SECRET_KEY = '$privatekey'/" configuration.py
 
 ##### Netbox script #####
