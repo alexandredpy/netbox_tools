@@ -65,7 +65,7 @@ sudo systemctl enable netbox netbox-rq
 
 ##### Apache2 install and config #####
 sudo apt install -y apache2
-sudo cp $currentdir/netbo.conf /etc/apache2/sites-available/netbox.conf
+sudo cp $currentdir/netbox.conf /etc/apache2/sites-available/netbox.conf
 # Change config to HTTP port 80
 sudo sed -i "s/ServerName netbox.example.com/ServerName $servername/" /etc/apache2/sites-available/netbox.conf
 sudo a2enmod ssl proxy proxy_http headers
