@@ -12,7 +12,6 @@ read dbpasswd
 echo "Enter server name (ex: netbox.example.com): "
 read servername
 
-
 ##### Database installation #####
 sudo apt update
 sudo apt install -y postgresql
@@ -29,7 +28,8 @@ sudo apt install -y redis-server
 ##### Netbox install #####
 sudo apt install -y adduser git python3 python3-pip python3-venv python3-dev build-essential libxml2-dev libxslt1-dev libffi-dev libpq-dev libssl-dev zlib1g-dev
 sudo pip3 install --upgrade pip
-cd /opt/
+mkdir /opt/netbox/
+cd /opt/netbox/
 sudo git clone -b master --depth 1 https://github.com/netbox-community/netbox.git .
 sudo adduser --system --group netbox
 sudo chown --recursive netbox /opt/netbox/netbox/media/
@@ -75,6 +75,6 @@ sudo systemctl restart apache2
 
 ##### End of script #####
 sudo systemctl restart netbox netbox-rq
-clear
+echo "================="
 echo "Upgrade complete"
 echo "If service restart failed, please check the ExecStart path of service"
