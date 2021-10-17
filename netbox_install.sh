@@ -12,6 +12,7 @@ read dbpasswd
 echo "Enter server name (ex: netbox.example.com): "
 read servername
 currentdir=$(pwd)
+apt install -y sudo
 
 ##### Database installation #####
 sudo apt update
