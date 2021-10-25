@@ -9,7 +9,7 @@ In your home directory :
 ```bash
 git clone https://github.com/alexandredpy/netbox_tools.git
 chmod u+x netbox_upgrade.sh
-chmdo u+x netbox_install.sh
+chmod u+x netbox_install.sh
 sh netbox_upgrade.sh
 sh netbox_install.sh
 ```

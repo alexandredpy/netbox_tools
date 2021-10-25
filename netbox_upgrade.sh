@@ -20,7 +20,7 @@ sudo ln -sfn /opt/netbox-$NEW/ /opt/netbox
 
 ###### Copy of config ############
 while true; do
-    read -p "Avez vous setup des local_requirements ?" yn
+    read -p "Avez vous setup des local_requirements ? [y/n]" yn
     case $yn in
         [Yy]* ) sudo cp /opt/netbox-$OLD/local_requirements.txt /opt/netbox/; break;;
         [Nn]* ) exit;;
@@ -29,7 +29,7 @@ while true; do
 done
 
 while true; do
-    read -p "Avez vous setup une authentification LDAP ?" yn
+    read -p "Avez vous setup une authentification LDAP ? [y/n]" yn
     case $yn in
         [Yy]* ) sudo cp /opt/netbox-$OLD/netbox/netbox/ldap_config.py /opt/netbox/netbox/netbox/; break;;
         [Nn]* ) exit;;
