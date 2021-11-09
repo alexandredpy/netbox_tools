@@ -23,7 +23,7 @@ while true; do
     read -p "Avez vous setup des local_requirements ? [y/n]" yn
     case $yn in
         [Yy]* ) sudo cp /opt/netbox-$OLD/local_requirements.txt /opt/netbox/; break;;
-        [Nn]* ) exit;;
+        [Nn]* ) echo "";;
         * ) echo "Merci de repondre yes(y) or no(n)";;
     esac
 done
@@ -32,7 +32,7 @@ while true; do
     read -p "Avez vous setup une authentification LDAP ? [y/n]" yn
     case $yn in
         [Yy]* ) sudo cp /opt/netbox-$OLD/netbox/netbox/ldap_config.py /opt/netbox/netbox/netbox/; break;;
-        [Nn]* ) exit;;
+        [Nn]* ) echo "";;
         * ) echo "Merci de repondre yes(y) or no(n)";;
     esac
 done
