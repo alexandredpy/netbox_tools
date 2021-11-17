@@ -1,4 +1,6 @@
 #!/bin/bash
+# Author : Alexandre DPY (https://github.com/alexandredpy)$
+# License : CC-BY-NC-SA
 clear
 echo "------------------------"
 echo "Netbox Upgrade"

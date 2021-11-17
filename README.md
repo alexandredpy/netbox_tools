@@ -16,3 +16,6 @@ sh netbox_install.sh
 
 ## Contact :
 Alexandre DPY
+
+## License :
+[Creative Commons : CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)
