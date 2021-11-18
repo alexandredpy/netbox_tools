@@ -6,7 +6,7 @@ Homemade tools to install, upgrade and use [Netbox](https://github.com/netbox-co
 
 ## Download & launch : 
 In your home directory :
-```bash
+```shell
 git clone https://github.com/alexandredpy/netbox_tools.git
 chmod u+x netbox_upgrade.sh
 chmod u+x netbox_install.sh
